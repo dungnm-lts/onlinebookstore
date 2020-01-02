@@ -10,7 +10,9 @@
       }        
     }
     stage('Results') {          
-      junit '**/target/surefire-reports/TEST-*.xml'          
+       sh 'sleep 3600'
+      junit '**/target/surefire-reports/TEST-*.xml'
+      
       archive 'target/*.jar'        
     }      
   }
